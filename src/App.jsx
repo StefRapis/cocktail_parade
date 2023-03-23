@@ -60,7 +60,7 @@ import Content from "./components/content";
 import DrinkModal from "./components/drinkModal";
 import Hamburger from "./components/hamburger";
 import Reservation from "./components/reservation";
-
+import Popup from "./components/popup";
 import Footer from "./components/footer";
 
 function App() {
@@ -73,6 +73,13 @@ function App() {
   const [cocktailCategory, setCocktailCategory] = useState("");
   const [reservationVisible, setReservationVisible] = useState(false);
 
+  // state per input di Reservation
+  const [name, setName] = useState("");
+  const [day, setDay] = useState("");
+  const [time, setTime] = useState("");
+
+  const [popupOn, setPopupOn] = useState(false);
+
   // drinkModal racchiude in se sia il valore booleano che l'oggetto che inizialmente é vuoto.
   const [drinkModal, setDrinkModal] = useState({
     isVisible: false,
@@ -80,15 +87,29 @@ function App() {
   });
   const [cocktailList, setCocktailList] = useState([]);
 
+  // timeout per il popup
+  setTimeout(() => {
+    setPopupOn(false);
+  }, 3000);
+
   return (
     <div className={styles.App}>
       <Navbar
         setBurgerMenu={setBurgerMenu}
         setReservationVisible={setReservationVisible}
       />
-
+      {popupOn && <Popup />}
       {reservationVisible && (
-        <Reservation setReservationVisible={setReservationVisible} />
+        <Reservation
+          setReservationVisible={setReservationVisible}
+          name={name}
+          day={day}
+          time={time}
+          setName={setName}
+          setDay={setDay}
+          setTime={setTime}
+          setPopupOn={setPopupOn}
+        />
       )}
       {burgerMenu ? <Hamburger /> : null}
       {drinkModal.isVisible ? (

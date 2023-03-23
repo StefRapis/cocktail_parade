@@ -1,19 +1,18 @@
 import styles from "./index.module.scss";
-import Popup from "../popup";
 
-import { useState } from "react";
-
-const Reservation = ({ setReservationVisible }) => {
-  const [name, setName] = useState("");
-  const [day, setDay] = useState("");
-  const [time, setTime] = useState("");
-
+const Reservation = ({
+  setReservationVisible,
+  name,
+  day,
+  time,
+  setName,
+  setDay,
+  setTime,
+  setPopupOn,
+}) => {
   const closeFromOverlay = () => {
     setReservationVisible(false);
   };
-
-  // state per visibilita popup
-  const [popupOn, setPopupOn] = useState(false);
 
   // salvataggio input
   const saveName = (event) => {
@@ -33,6 +32,7 @@ const Reservation = ({ setReservationVisible }) => {
     event.preventDefault();
     console.log(name, day, time);
     setPopupOn(true);
+    setReservationVisible(false);
   };
 
   return (
@@ -77,9 +77,6 @@ const Reservation = ({ setReservationVisible }) => {
           />
           <input className={styles.button} type="submit" value={"Book"} />
         </form>
-        {popupOn && (
-          <Popup name={name} day={day} time={time} setPopupOn={setPopupOn} />
-        )}
       </div>
     </div>
   );

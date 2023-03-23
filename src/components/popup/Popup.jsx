@@ -1,10 +1,6 @@
 import styles from "./index.module.scss";
 
-const Popup = ({ name, day, time, setPopupOn }) => {
-  setTimeout(() => {
-    setPopupOn(false);
-  }, 2000);
-
+const Popup = ({ name, day, time }) => {
   return (
     <div className={styles.Popup}>
       <p>
