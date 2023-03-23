@@ -1,0 +1,20 @@
+@import "../../styles/variables";
+
+.Popup {
+  border-radius: 10px;
+  position: fixed;
+  top: 70px;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: 25%;
+  z-index: 4;
+  background-color: $primary-color;
+  color: $base-colour;
+
+  p {
+    text-align: center;
+    padding: 10px 20px;
+  }
+}

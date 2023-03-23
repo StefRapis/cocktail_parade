@@ -1,0 +1,64 @@
+@import "../../styles/variables";
+
+.Reservation {
+  .overlay {
+    // border: 2px solid red;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $base-colour-transparent;
+    z-index: 2;
+  }
+
+  .content {
+    // border: 2px solid red;
+    position: fixed;
+    width: 50%;
+    top: 200px;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 3;
+    background-color: $base-colour;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 10px 28px 13px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      padding-top: 15px;
+      color: $primary-color;
+      font-size: 1.9rem;
+    }
+
+    .form {
+      // border: 2px solid red;
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      padding: 20px 20px 60px 20px;
+
+      .labels {
+        // border: 2px solid red;
+      }
+
+      input {
+        outline: none;
+      }
+
+      .button {
+        margin-top: 20px;
+        cursor: pointer;
+        background-color: $primary-color;
+        color: $base-colour;
+        border: none;
+        border-radius: 5px;
+        padding: 7px 5px;
+      }
+    }
+  }
+}
