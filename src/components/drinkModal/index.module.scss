@@ -42,7 +42,7 @@
   }
 
   .allInfo {
-    background-color: rgb(249, 150, 150);
+    background-color: $accent-colour;
     // border: 2px solid blue;
     width: 60%;
     border-bottom-right-radius: 10px;
@@ -93,11 +93,11 @@
     }
     .ingredients {
       // border: 2px solid white;
-      background-color: rgb(249, 150, 150);
+      background-color: $accent-colour;
       padding-left: 30px;
 
       .tagIng {
-        background-color: rgb(249, 150, 150);
+        background-color: $accent-colour;
         font-size: 1.2rem;
         margin-bottom: 10px;
       }
@@ -108,12 +108,12 @@
     }
 
     .preparation {
-      background-color: rgb(249, 150, 150);
+      background-color: $accent-colour;
       padding: 10px 20px 30px 0;
       border-bottom-right-radius: 10px;
 
       .tagPrep {
-        background-color: rgb(249, 150, 150);
+        background-color: $accent-colour;
         font-size: 1.2rem;
         padding-left: 30px;
         margin-bottom: 3px;
@@ -121,9 +121,9 @@
 
       .instructions {
         // border: 2px solid white;
-        background-color: brown;
+        background-color: $accent-colour;
         padding-left: 30px;
-        background-color: rgb(249, 150, 150);
+        background-color: $accent-colour;
       }
     }
   }

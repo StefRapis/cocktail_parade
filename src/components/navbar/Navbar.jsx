@@ -17,13 +17,12 @@ const Navbar = ({ setBurgerMenu, setReservationVisible }) => {
       <ul className={styles.menu}>
         <li>Story</li>
         <li>Mission</li>
-        <li>Cocktails</li>
         <li>Contacts</li>
       </ul>
 
       <img
         className={styles.logo}
-        src="https://img.freepik.com/premium-vector/minimalistic-logo-alcoholic-bar-shop-restaurant-martini-cocktail-glass-with-straw-white-background-with-inscription-cocktail-bar_450656-249.jpg"
+        src="src\assets\Logo cocktail parade.png"
         alt="logo"
       />
 

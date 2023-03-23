@@ -5,8 +5,14 @@
 .Hero {
   @include flex-container(column, center, center);
   position: relative;
-  margin-bottom: 80px;
-
+  margin-top: 130px;
+  margin-bottom: 160px;
+  height: 500px;
+  width: 100%;
+  background-image: url("https://images.unsplash.com/photo-1592858321831-dabeabc2dd65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80");
+  background-size: 100% auto;
+  background-position-x: center;
+  background-position-y: 40%;
   //   border: 2px solid blue;
   // display: flex;
   // flex-direction: column;
@@ -23,7 +29,7 @@
   .title {
     font-size: 5.5rem;
     position: absolute;
-    bottom: 5px;
+    bottom: -55px;
     font-family: "Lobster", cursive;
     z-index: 2;
     color: white;
@@ -33,9 +39,12 @@
   .categories {
     background-color: $primary-color;
     // width: 100%;
-    border-radius: 20px;
-    transform: translateY(-20px);
-    padding: 0 40px;
+    border-radius: 40px;
+    // transform: translateY(-20px);
+    padding: 0 50px;
+    font-size: 1rem;
+    position: absolute;
+    bottom: -40px;
 
     li {
       &:hover {
