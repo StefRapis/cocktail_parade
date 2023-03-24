@@ -18,7 +18,7 @@
   .burger {
     // border: 2px solid red;
     width: 40px;
-    height: 30px;
+    height: 40px;
     cursor: pointer;
   }
 
@@ -76,17 +76,17 @@
   // }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .menu {
     display: none !important;
   }
 
   .burger {
-    display: block;
+    display: block !important;
   }
 }
 
-@media screen and (min-width: 501px) {
+@media screen and (min-width: 600px) {
   .burger {
     display: none !important;
   }
