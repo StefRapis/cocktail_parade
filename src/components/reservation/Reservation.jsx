@@ -39,7 +39,9 @@ const Reservation = ({
     <div className={styles.Reservation}>
       <div className={styles.overlay} onClick={closeFromOverlay}></div>
       <div className={styles.content}>
-        <h2>Try our Cocktails!</h2>
+        <h2>
+          Try our <span className={styles.Cocktails}>Cocktails</span> !
+        </h2>
         <form className={styles.form} onSubmit={onHandleSubmit}>
           <label className={styles.labels} htmlFor="text">
             Your name

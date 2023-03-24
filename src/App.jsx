@@ -47,7 +47,16 @@ Sulla base della lezione del giorno, spostare il componente <Popup />all'interno
 Attenzione: La modale per prenotare il posto, al click del pulsante Prenota! scompare!
 
 Avanzato
-Scrivere la logica relativa alla prenotazione, come visto durante la lezione.*/
+Scrivere la logica relativa alla prenotazione, come visto durante la lezione.
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+24-3-2023
+
+Esercizio 1
+Sulla base della lezione del giorno, modificare il componente <Hero /> adattandolo agli Styled Components.
+
+Attenzione: Per questo componente non deve esistere alcun foglio di stile. Gestire eventuali mediaqueries sempre Styled Components.*/
 
 import { useState, useEffect } from "react";
 // import { GET } from "./utils/fetch";
@@ -87,10 +96,10 @@ function App() {
   });
   const [cocktailList, setCocktailList] = useState([]);
 
-  // timeout per il popup
-  setTimeout(() => {
-    setPopupOn(false);
-  }, 3000);
+  // // timeout per il popup
+  // setTimeout(() => {
+  //   setPopupOn(false);
+  // }, 3000);
 
   return (
     <div className={styles.App}>
@@ -98,7 +107,9 @@ function App() {
         setBurgerMenu={setBurgerMenu}
         setReservationVisible={setReservationVisible}
       />
-      {popupOn && <Popup />}
+      {popupOn && (
+        <Popup name={name} day={day} time={time} setPopupOn={setPopupOn} />
+      )}
       {reservationVisible && (
         <Reservation
           setReservationVisible={setReservationVisible}

@@ -1,11 +1,19 @@
 import styles from "./index.module.scss";
+import { useEffect } from "react";
 
-const Popup = ({ name, day, time }) => {
+const Popup = ({ name, day, time, setPopupOn }) => {
+  // timeout per il popup che viene eseguito quando il comp. viene montato.
+  useEffect(() => {
+    setTimeout(() => {
+      setPopupOn(false);
+    }, 3000);
+  }, []);
+
   return (
     <div className={styles.Popup}>
+      <h3>Booking submitted!</h3>
       <p>
-        Thank You! Your booking has been submitted. See you on {day}, {time}, Mr
-        {name}!
+        See you on {day} at {time} {name}!
       </p>
     </div>
   );

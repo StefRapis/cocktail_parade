@@ -8,7 +8,7 @@
   // height: 400px;
   background-color: $base-colour;
   position: fixed;
-  top: 200px;
+  top: 270px;
   right: 0;
   left: 0;
   margin-right: auto;
@@ -127,6 +127,36 @@
         padding-left: 30px;
         padding-right: 30px;
         background-color: $primary-color-light;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .DrinkModal {
+    position: fixed;
+    top: 180px;
+    right: 80px;
+    left: 5px;
+    margin-right: 10%;
+    margin-left: 10%;
+    height: 70%;
+    width: 80%;
+
+    .image {
+      // border: 2px solid red;
+
+      justify-content: flex-end;
+      width: 20%;
+      // min-width: 200px;
+      // border-top: 5px solid $primary-color;
+
+      img {
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 10px;
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
       }
     }
   }

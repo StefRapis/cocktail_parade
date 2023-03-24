@@ -10,11 +10,14 @@
   margin-left: auto;
   width: 25%;
   z-index: 4;
-  background-color: $primary-color;
+  background-color: $accent-colour;
+
   color: $base-colour;
 
+  h3,
   p {
     text-align: center;
-    padding: 10px 20px;
+    padding: 0 20px;
+    line-height: 1;
   }
 }
