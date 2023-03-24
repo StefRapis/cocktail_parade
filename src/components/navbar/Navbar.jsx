@@ -20,11 +20,7 @@ const Navbar = ({ setBurgerMenu, setReservationVisible }) => {
         <li>Contacts</li>
       </ul>
 
-      <img
-        className={styles.logo}
-        src="src\assets\Logo cocktail parade.png"
-        alt="logo"
-      />
+      <img className={styles.logo} src="logo.png" alt="logo" />
 
       <button onClick={openReservation}>Book a table</button>
       {/* <div className={styles.social}>
