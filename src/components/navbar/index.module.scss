@@ -78,18 +78,26 @@
 }
 
 @media screen and (max-width: 600px) {
-  .menu {
-    display: none !important;
-  }
+  .Navbar {
+    .burger {
+      display: block;
+      padding-left: 10px;
+    }
+    .menu {
+      display: none;
+    }
 
-  .burger {
-    display: block !important;
+    button {
+      margin-right: 15px;
+    }
   }
 }
 
 @media screen and (min-width: 600px) {
-  .burger {
-    display: none !important;
+  .Navbar {
+    .burger {
+      display: none;
+    }
   }
 
   .menu {
