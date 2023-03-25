@@ -37,6 +37,10 @@ const HeroTitle = styled.div`
     max-width: 500px;
     font-size: 5.5rem;
   }
+  @media screen and (max-width: 450px) {
+    line-height: 0.8;
+    top: 330px;
+  }
 `;
 
 const HeroCategories = styled.div`
@@ -46,6 +50,10 @@ const HeroCategories = styled.div`
   font-size: 1rem;
   position: absolute;
   bottom: -52px;
+  @media screen and (max-width: 450px) {
+    width: 100vw;
+    padding: 18px 0;
+  }
 `;
 
 const HeroUl = styled.div`
@@ -63,6 +71,9 @@ const HeroUl = styled.div`
     color: white;
     cursor: pointer;
     font-size: 1.3rem;
+    @media screen and (max-width: 450px) {
+      font-size: 1.1rem;
+    }
 
     &:hover {
       transform: scale(1.3);

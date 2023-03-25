@@ -134,17 +134,64 @@
 
 @media screen and (max-width: 600px) {
   .DrinkModal {
+    flex-direction: column;
     position: fixed;
     top: 180px;
     right: 80px;
     left: 5px;
     margin-right: 10%;
     margin-left: 10%;
-    height: 70%;
     width: 80%;
+
+    .allInfo {
+      width: 100%;
+      background-color: $primary-color;
+
+      .info {
+        button {
+          font-size: 1.5rem;
+          height: 40px;
+          width: 40px;
+          top: -300px;
+          right: 15px;
+          background-color: $primary-color;
+          border-radius: 100%;
+        }
+      }
+
+      .ingredients {
+        line-height: 1.2;
+        background-color: $primary-color;
+
+        .tagIng {
+          margin-top: 17px;
+          background-color: $primary-color;
+        }
+      }
+
+      .preparation {
+        background-color: $primary-color;
+        margin-top: 0;
+        padding-top: 0;
+
+        .tagPrep {
+          background-color: $primary-color;
+          padding-top: 0;
+          margin-top: 15px;
+        }
+
+        .instructions {
+          background-color: $primary-color;
+          margin-top: 7px;
+        }
+      }
+    }
 
     .image {
       // border: 2px solid red;
+      width: 100% !important;
+      object-fit: cover;
+      height: 100%;
 
       justify-content: flex-end;
       width: 20%;
@@ -152,10 +199,12 @@
       // border-top: 5px solid $primary-color;
 
       img {
+        // border: 2px solid red;
         border-top-left-radius: 100px;
-        border-bottom-left-radius: 10px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
         width: 100%;
-        height: 70%;
+        height: 100%;
         object-fit: cover;
       }
     }
