@@ -73,14 +73,13 @@ import Popup from "./components/popup";
 import Footer from "./components/footer";
 
 function App() {
-  // const [cocktailList, setCocktailList] = useState([]);
-
   // useEffect(() => {
   //   GET("d").then(({ drinks }) => setCocktailList(() => drinks));
   // }, []);
   const [burgerMenu, setBurgerMenu] = useState(false);
   const [cocktailCategory, setCocktailCategory] = useState("");
   const [reservationVisible, setReservationVisible] = useState(false);
+  const [drinkByLetter, setDrinkByLetter] = useState("");
 
   // state per input di Reservation
   const [name, setName] = useState("");
@@ -130,7 +129,11 @@ function App() {
         />
       ) : (
         <>
-          <Hero setCocktailCategory={setCocktailCategory} />
+          <Hero
+            setCocktailCategory={setCocktailCategory}
+            drinkByLetter={drinkByLetter}
+            setDrinkByLetter={setDrinkByLetter}
+          />
           <Content
             data={cocktailCategory}
             setDrinkModal={setDrinkModal}

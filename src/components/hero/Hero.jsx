@@ -83,7 +83,33 @@ const HeroUl = styled.div`
   }
 `;
 
-const Hero = ({ setCocktailCategory }) => {
+const HeroLetter = styled.div`
+  position: absolute;
+  bottom: -103px;
+  display: flex;
+
+  & select {
+    background-color: #ffb728;
+    border: 0px;
+    padding: 10px;
+    font-size: 1.6rem;
+    outline: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    font-family: "Lobster", cursive;
+    color: white;
+    appearance: none;
+    text-align: center;
+    cursor: pointer;
+  }
+`;
+
+const Hero = ({ setCocktailCategory, drinkByLetter, setDrinkByLetter }) => {
+  const saveLetter = (event) => {
+    console.log(event);
+  };
+
   return (
     <HeroWrapper>
       <HeroTitle>What's your flavour?</HeroTitle>
@@ -100,6 +126,36 @@ const Hero = ({ setCocktailCategory }) => {
           <li onClick={() => setCocktailCategory("Shot")}>SHOT</li>
         </HeroUl>
       </HeroCategories>
+      <HeroLetter>
+        <select name="letter" id="letter" onClick={saveLetter}>
+          <option value="a">a</option>
+          <option value="b">b</option>
+          <option value="c">c</option>
+          <option value="d">d</option>
+          <option value="e">e</option>
+          <option value="f">f</option>
+          <option value="g">g</option>
+          <option value="h">h</option>
+          <option value="i">i</option>
+          <option value="j">j</option>
+          <option value="k">k</option>
+          <option value="l">l</option>
+          <option value="m">m</option>
+          <option value="n">n</option>
+          <option value="o">o</option>
+          <option value="p">p</option>
+          <option value="q">q</option>
+          <option value="r">r</option>
+          <option value="s">s</option>
+          <option value="t">t</option>
+          <option value="u">u</option>
+          <option value="v">v</option>
+          <option value="w">w</option>
+          <option value="x">x</option>
+          <option value="y">y</option>
+          <option value="c">z</option>
+        </select>
+      </HeroLetter>
     </HeroWrapper>
   );
 };
