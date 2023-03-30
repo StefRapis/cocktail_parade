@@ -139,6 +139,7 @@ function App() {
             setDrinkModal={setDrinkModal}
             cocktailList={cocktailList}
             setCocktailList={setCocktailList}
+            drinkByLetter={drinkByLetter}
           />
           <Footer />
         </>

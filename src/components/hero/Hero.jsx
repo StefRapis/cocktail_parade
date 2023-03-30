@@ -8,7 +8,7 @@ const HeroWrapper = styled.div`
   align-items: center;
   position: relative;
   margin-top: 130px;
-  margin-bottom: 160px;
+  margin-bottom: 200px;
   height: 550px;
   width: 100%;
   background-image: url("https://images.pexels.com/photos/6544066/pexels-photo-6544066.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
@@ -106,8 +106,43 @@ const HeroLetter = styled.div`
 `;
 
 const Hero = ({ setCocktailCategory, drinkByLetter, setDrinkByLetter }) => {
+  const letters = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+  ];
+
+  const options = letters.map((letter) => (
+    <option value={letter}>{letter}</option>
+  ));
+
   const saveLetter = (event) => {
-    console.log(event);
+    event.preventDefault();
+    setDrinkByLetter(event.target.value);
+    console.log(drinkByLetter);
   };
 
   return (
@@ -127,33 +162,8 @@ const Hero = ({ setCocktailCategory, drinkByLetter, setDrinkByLetter }) => {
         </HeroUl>
       </HeroCategories>
       <HeroLetter>
-        <select name="letter" id="letter" onClick={saveLetter}>
-          <option value="a">a</option>
-          <option value="b">b</option>
-          <option value="c">c</option>
-          <option value="d">d</option>
-          <option value="e">e</option>
-          <option value="f">f</option>
-          <option value="g">g</option>
-          <option value="h">h</option>
-          <option value="i">i</option>
-          <option value="j">j</option>
-          <option value="k">k</option>
-          <option value="l">l</option>
-          <option value="m">m</option>
-          <option value="n">n</option>
-          <option value="o">o</option>
-          <option value="p">p</option>
-          <option value="q">q</option>
-          <option value="r">r</option>
-          <option value="s">s</option>
-          <option value="t">t</option>
-          <option value="u">u</option>
-          <option value="v">v</option>
-          <option value="w">w</option>
-          <option value="x">x</option>
-          <option value="y">y</option>
-          <option value="c">z</option>
+        <select name="letter" id="letter" onChange={saveLetter}>
+          {options}
         </select>
       </HeroLetter>
     </HeroWrapper>

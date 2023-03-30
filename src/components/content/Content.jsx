@@ -20,7 +20,13 @@ import Card from "../card";
 // };
 
 // devo fare filtro su array della fetch
-const Content = ({ data, cocktailList, setCocktailList, setDrinkModal }) => {
+const Content = ({
+  data,
+  cocktailList,
+  setCocktailList,
+  setDrinkModal,
+  drinkByLetter,
+}) => {
   useEffect(() => {
     GET("d").then(({ drinks }) => setCocktailList(() => drinks));
   }, []);
