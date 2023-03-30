@@ -1,5 +1,6 @@
 // import styles from "./index.module.scss";
 import styled from "styled-components";
+import { useState, useEffect } from "react";
 
 const HeroWrapper = styled.div`
   display: flex;
@@ -162,9 +163,16 @@ const Hero = ({ setCocktailCategory, drinkByLetter, setDrinkByLetter }) => {
         </HeroUl>
       </HeroCategories>
       <HeroLetter>
-        <select name="letter" id="letter" onChange={saveLetter}>
-          {options}
-        </select>
+        <form>
+          <select
+            name="letter"
+            id="letter"
+            value={drinkByLetter}
+            onChange={saveLetter}
+          >
+            {options}
+          </select>
+        </form>
       </HeroLetter>
     </HeroWrapper>
   );

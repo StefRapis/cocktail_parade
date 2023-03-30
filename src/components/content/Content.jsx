@@ -28,8 +28,8 @@ const Content = ({
   drinkByLetter,
 }) => {
   useEffect(() => {
-    GET("d").then(({ drinks }) => setCocktailList(() => drinks));
-  }, []);
+    GET(`${drinkByLetter}`).then(({ drinks }) => setCocktailList(() => drinks));
+  }, [drinkByLetter]);
 
   return (
     <div className={styles.Content}>

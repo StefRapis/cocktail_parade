@@ -79,7 +79,7 @@ function App() {
   const [burgerMenu, setBurgerMenu] = useState(false);
   const [cocktailCategory, setCocktailCategory] = useState("");
   const [reservationVisible, setReservationVisible] = useState(false);
-  const [drinkByLetter, setDrinkByLetter] = useState("");
+  const [drinkByLetter, setDrinkByLetter] = useState("p");
 
   // state per input di Reservation
   const [name, setName] = useState("");
